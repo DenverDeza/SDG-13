@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Carbon Calculator | GreenPath</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>GreenPath</h1>
+        <p class="tag">Carbon Tracker — SDG 13: Climate Action</p>
+      </div>
+
+      <nav aria-label="Primary" class="main-nav">
+        <ul class="nav" role="menubar">
+          <li role="none"><a role="menuitem" href="index.html">Home</a></li>
+          <li role="none"><a role="menuitem" href="calculator.html" aria-current="page">Calculator</a></li>
+          <li role="none"><a role="menuitem" href="tips.html">Tips</a></li>
+          <li role="none"><a role="menuitem" href="about.html">About SDG</a></li>
+        </ul>
+      </nav>
+
+      <div class="theme-toggle">
+        <button id="themeToggle" aria-pressed="false" title="Toggle light / dark theme">🌤️ / 🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" id="main">
+
+    <section class="form-section" aria-labelledby="calc-title">
+      <h2 id="calc-title">Log Your Daily Trip</h2>
+
+      <form id="carbonForm" class="form-grid">
+        <div class="field">
+          <label for="vehicle">Vehicle Type</label>
+          <select id="vehicle" required>
+            <option value="car">Car (0.21 kg/km)</option>
+            <option value="motorbike">Motorbike (0.10 kg/km)</option>
+            <option value="bus">Bus (0.05 kg/km)</option>
+            <option value="bicycle">Bicycle (0 kg/km)</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="distance">Distance (km)</label>
+          <input type="number" id="distance" placeholder="Enter distance..." min="0" required>
+        </div>
+
+        <button type="submit" class="btn primary full">Add Trip</button>
+      </form>
+    </section>
+
+
+    <section class="output-section" aria-labelledby="results-title">
+      <h2 id="results-title">Results</h2>
+      <p id="tripResult" class="muted">No trip added yet.</p>
+
+      <h3>Total CO₂ Emissions</h3>
+      <p id="totalResult" class="big-number">0 kg</p>
+
+      <div class="progress-container" aria-label="Emission Goal Progress">
+        <div id="progressBar"></div>
+      </div>
+
+      <h3>Trip History</h3>
+      <div class="table-wrap">
+        <table id="tripTable">
+          <thead>
+            <tr><th>Date</th><th>Vehicle</th><th>Distance</th><th>CO₂ (kg)</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <h3>Graph</h3>
+      <canvas id="emissionChart" height="120"></canvas>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <p>GreenPath Carbon Tracker — SDG 13: Climate Action</p>
+      <nav aria-label="Social links">
+        <ul style="display:flex;gap:10px;list-style:none;padding:0;margin:0">
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">GitHub</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="file.js" defer></script>
+</body>
+</html>

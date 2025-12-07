@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Carbon Calculator | GreenPath</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>GreenPath</h1>
+        <p class="tag">Carbon Tracker — SDG 13: Climate Action</p>
+      </div>
+
+      <nav aria-label="Primary" class="main-nav">
+        <ul class="nav" role="menubar">
+          <li role="none"><a role="menuitem" href="index.html">Home</a></li>
+          <li role="none"><a role="menuitem" href="calculator.html" aria-current="page">Calculator</a></li>
+          <li role="none"><a role="menuitem" href="tips.html">Tips</a></li>
+          <li role="none"><a role="menuitem" href="about.html">About SDG</a></li>
+        </ul>
+      </nav>
+
+      <div class="theme-toggle">
+        <button id="themeToggle" aria-pressed="false" title="Toggle light / dark theme">🌤️ / 🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-left">
+        <p class="eyebrow" aria-hidden="true">Measure • Reduce • Inspire</p>
+        <h2 id="hero-title" class="hero-title">Track your CO₂ emissions. Save the planet.</h2>
+        <p class="hero-lead">Small daily choices add up. Use GreenPath to measure your personal carbon footprint and discover practical ways to reduce it — with clear goals, helpful tips, and progress tracking.</p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="calculator.html">Start Tracking</a>
+          <a class="btn ghost" href="about.html">Learn about SDG 13</a>
+        </div>
+
+        <div class="quick-stats" aria-live="polite">
+          <div class="stat" role="status">
+            <strong id="statTrips">0</strong>
+            <span>Trips logged</span>
+          </div>
+          <div class="stat" role="status">
+            <strong id="statTotal">0 kg</strong>
+            <span>CO₂ total</span>
+          </div>
+        </div>
+
+        <div class="hero-meta" style="margin-top:18px">
+          <p class="muted">Tip: Try logging one week's worth of short trips — you'll be surprised how much you can reduce.</p>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="carousel" id="heroCarousel" aria-roledescription="carousel" aria-label="Inspiring climate images">
+          <button class="carousel-btn prev" aria-label="Previous slide">‹</button>
+
+          <div class="carousel-track" role="list">
+            <figure class="carousel-slide" role="listitem">
+              <img src="img/ecosystem.jpg" alt="Deer in a healthy forest ecosystem" loading="lazy">
+              <figcaption>Protect fragile ecosystems</figcaption>
+            </figure>
+
+            <figure class="carousel-slide" role="listitem">
+              <img src="img/fall.jpg" alt="Warm sunrise over autumn forest hills" loading="lazy">
+              <figcaption>Preserve our forests</figcaption>
+            </figure>
+
+            <figure class="carousel-slide" role="listitem">
+              <img src="img/icywoods.jpg" alt="Snow-covered winter forest" loading="lazy">
+              <figcaption>Plant for a resilient future</figcaption>
+            </figure>
+
+            <figure class="carousel-slide" role="listitem">
+              <img src="img/winter.jpg" alt="Winter forest landscape" loading="lazy">
+              <figcaption>Protect seasonal landscapes</figcaption>
+            </figure>
+
+            <figure class="carousel-slide" role="listitem">
+              <img src="img/penguin.avif" alt="Penguins diving from an icy ledge" loading="lazy">
+              <figcaption>Save their melting home</figcaption>
+            </figure>
+
+            <figure class="carousel-slide" role="listitem">
+              <img src="img/whale.jpg" alt="Whale feeding in the ocean" loading="lazy">
+              <figcaption>A gentle giant in a warming ocean</figcaption>
+            </figure>
+
+            <figure class="carousel-slide" role="listitem">
+              <img src="img/bear.png" alt="Bear hunting salmon in a river" loading="lazy">
+              <figcaption>Protect biodiversity</figcaption>
+            </figure>
+
+            <figure class="carousel-slide" role="listitem">
+              <img src="img/deer.jpg" alt="Deer walking through grassy field" loading="lazy">
+              <figcaption>Restore natural habitats</figcaption>
+            </figure>
+
+            <figure class="carousel-slide" role="listitem">
+              <img src="img/plains.jpg" alt="Woods, plains and river" loading="lazy">
+              <figcaption>Protect the landscapes that sustain life</figcaption>
+            </figure>
+          </div>
+
+          <button class="carousel-btn next" aria-label="Next slide">›</button>
+
+          <div class="carousel-indicators" aria-hidden="true" style="position:absolute;left:50%;transform:translateX(-50%);bottom:12px;display:flex;gap:8px"></div>
+        </div>
+
+        <noscript>
+          <div class="video-fallback" style="margin-top:16px">
+            <img src="img/car1.jpg" alt="Coastal landscape" style="width:100%;border-radius:var(--radius)">
+          </div>
+        </noscript>
+      </div>
+    </section>
+
+    <!-- VIDEO / EMBED -->
+    <section class="container iframe-card" aria-labelledby="video-heading">
+      <h3 id="video-heading">Watch: Causes and Effects of Climate Change | National Geographic</h3>
+      <div class="video-wrap" id="videoWrap">
+        <div style="position:relative;padding-top:56.25%;overflow:hidden;border-radius:var(--radius)">
+          <iframe src="https://www.youtube.com/embed/G4H1N_yXBiA" title="Climate Action" allowfullscreen style="position:absolute;left:0;top:0;width:100%;height:100%;border:0;"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIPS CAROUSEL / GRID -->
+    <section class="container tips-grid" aria-labelledby="tips-heading">
+      <h3 id="tips-heading">Quick Eco Tips</h3>
+
+        <ul class="tips-track" role="list">
+          <li class="tip-card" role="listitem">Walk or bike for short trips to cut transport emissions.</li>
+          <li class="tip-card" role="listitem">Choose seasonal, plant-forward meals to reduce food emissions.</li>
+          <li class="tip-card" role="listitem">Switch off standby appliances; save energy at home.</li>
+          <li class="tip-card" role="listitem">Use public transport and carpool when possible.</li>
+          <li class="tip-card" role="listitem">Compost organic waste to divert from landfill.</li>
+        </ul>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+    <div>
+      <p>GreenPath Carbon Tracker — SDG 13: Climate Action • Built by Denver Deza & Roanna Marie Detablan</p>
+      <p class="media-credit">Images and video sourced from National Geographic for educational, non-commercial use.</p>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="file.js" defer></script>
+</body>
+</html>
