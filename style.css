@@ -364,7 +364,12 @@ table th, table td {
   color: var(--muted);
   margin-top: 40px;
   border-top: 1px solid rgba(0,0,0,0.1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 
 /* ============================= */
 /*           ANIMATIONS          */
