@@ -79,8 +79,8 @@
 
     const track = carousel.querySelector('.carousel-track');
     const slides = Array.from(carousel.querySelectorAll('.carousel-slide'));
-    const prevBtn = carousel.querySelector('.carousel-btn.prev');
-    const nextBtn = carousel.querySelector('.carousel-btn.next');
+    const prevBtn = carousel.querySelector('button.prev');
+    const nextBtn = carousel.querySelector('button.next');
     const indicatorsWrap = carousel.querySelector('.carousel-indicators');
 
     // prepare lazy-loading for images inside carousel
