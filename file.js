@@ -332,3 +332,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 })();
 
+// Per-question feedback
+const quizButtons = document.querySelectorAll('.quiz-btn');
+
+quizButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const correct = btn.dataset.correct === 'true';
+    const feedback = btn.closest('.quiz-question').querySelector('.quiz-feedback');
+
+    feedback.textContent = correct ? '✅ Correct! Well done.' : '❌ Incorrect. Try again!';
+    feedback.classList.toggle('incorrect', !correct);
+  });
+});
+
+

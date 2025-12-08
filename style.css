@@ -388,3 +388,41 @@ table th, table td {
   input, select, button { font-size: 14px; }
 }
 
+/* Quiz Buttons */
+.quiz-btn {
+  background-color: #f0f0f0;
+  border: 2px solid #2a9d8f;
+  border-radius: 6px;
+  padding: 8px 16px;
+  margin: 4px 0;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+.quiz-btn:hover {
+  background-color: #2a9d8f;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Quiz Feedback */
+#quizFeedback {
+  margin-top: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Optional: quiz-question spacing */
+.quiz-question {
+  margin-bottom: 20px;
+}
+
+.quiz-feedback {
+  margin-top: 8px;
+  font-weight: bold;
+  color: #2a9d8f; /* green for correct by default */
+  font-size: 1rem;
+}
+.quiz-feedback.incorrect {
+  color: #e63946; /* red if wrong */
+}
+
