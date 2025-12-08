@@ -211,6 +211,7 @@ a:hover {
   cursor: pointer;
   font-weight: bold;
   width: 20px;
+  color: var(--text);
 }
 
 .carousel .carousel-btn.prev { left: 12px; }
